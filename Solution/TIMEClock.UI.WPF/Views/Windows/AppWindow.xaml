@@ -14,8 +14,11 @@
   
   <Grid>
     <TabControl>
+      <TabItem Header="Dashboard">
+        <cntrls:DashboardControl DataContext="{Binding DashboardViewModel}" />
+      </TabItem>
       <TabItem Header="Einträge">
-        <cntrls:RecordsOverview DataContext="{Binding RecordsOverviewViewModel}" />
+        <cntrls:RecordsControl DataContext="{Binding RecordsOverviewViewModel}" />
       </TabItem>
       <TabItem Header="Einstellungen">
         <cntrls:SettingsControl DataContext="{Binding SettingsViewModel}" />

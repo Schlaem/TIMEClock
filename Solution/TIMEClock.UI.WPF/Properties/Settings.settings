@@ -5,5 +5,11 @@
     <Setting Name="DbConnectionString" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="StartDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2026-01-01</Value>
+    </Setting>
+    <Setting Name="SollWorktime" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:08:30</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

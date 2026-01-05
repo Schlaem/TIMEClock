@@ -34,5 +34,29 @@ namespace TIMEClock.UI.WPF.Properties {
                 this["DbConnectionString"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2026-01-01")]
+        public global::System.DateTime StartDate {
+            get {
+                return ((global::System.DateTime)(this["StartDate"]));
+            }
+            set {
+                this["StartDate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("00:08:30")]
+        public global::System.TimeSpan SollWorktime {
+            get {
+                return ((global::System.TimeSpan)(this["SollWorktime"]));
+            }
+            set {
+                this["SollWorktime"] = value;
+            }
+        }
     }
 }
