@@ -1,0 +1,22 @@
+﻿<Window x:Class="TIMEClock.UI.WPF.Views.Windows.AppWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cntrls="clr-namespace:TIMEClock.UI.WPF.Views.Controls"
+        xmlns:local="clr-namespace:TIMEClock.UI.WPF.Views.Windows"
+        xmlns:vms="clr-namespace:TIMEClock.UI.WPF.ViewModels"
+        mc:Ignorable="d"
+        Title="TIMEClock"
+        Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance vms:AppViewModel, IsDesignTimeCreatable=False}">
+  
+  <Grid>
+    <TabControl>
+      <TabItem Header="Settings">
+        <cntrls:SettingsControl DataContext="{Binding SettingsViewModel}" />
+      </TabItem>
+    </TabControl>
+  </Grid>
+</Window>
