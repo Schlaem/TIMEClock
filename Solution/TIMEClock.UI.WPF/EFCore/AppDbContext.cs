@@ -6,6 +6,8 @@ namespace TIMEClock.UI.WPF.EFCore
 {
     public class AppDbContext : DbContext
     {
+        public DbSet<TimeRecord> TimeRecords { get; set; }
+
         public AppDbContext() : base()
         {
             if(Database.EnsureCreated())
@@ -35,7 +37,9 @@ namespace TIMEClock.UI.WPF.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TimeRecord>();
+            modelBuilder.Entity<TimeRecord>().HasData(
+                new TimeRecord { ID = 1, Created = DateTime.Now, From = new DateTime(2026, 1, 5, 7, 5, 0), Until = new DateTime(2026, 1, 5, 11, 35, 0) },
+                new TimeRecord { ID = 2, Created = DateTime.Now, From = new DateTime(2026, 1, 5, 12, 0, 0) });
         }
     }
 }
